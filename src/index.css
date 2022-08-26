@@ -1,13 +1,119 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.normal {
+  background-image: linear-gradient(to right, #fcf8c9, rgb(255, 255, 255));
+}
+.fire {
+  background-image: linear-gradient(to right, #ff9784, rgb(255, 255, 255));
+}
+.water {
+  background-image: linear-gradient(to right, #89ceff, rgb(255, 255, 255));
+}
+.grass {
+  background-image: linear-gradient(to right, #85ff81, rgb(255, 255, 255));
+}
+.flying {
+  background-image: linear-gradient(to right, #fdfc9c, rgb(255, 255, 255));
+}
+.fighting {
+  background-image: linear-gradient(to right, #fd9550, rgb(255, 255, 255));
+}
+.poison {
+  background-image: linear-gradient(to right, #e0a7f6, rgb(255, 255, 255));
+}
+.electric {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 142),
+    rgb(255, 255, 255)
+  );
+}
+.ground {
+  background-image: linear-gradient(to right, #fa703a, rgb(255, 255, 255));
+}
+
+.rock {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 233, 134),
+    rgb(255, 255, 255)
+  );
+}
+.psychic {
+  background-image: linear-gradient(
+    to right,
+    rgb(152, 73, 255),
+    rgb(255, 255, 255)
+  );
+}
+.ice {
+  background-image: linear-gradient(
+    to right,
+    rgb(143, 215, 248),
+    rgb(255, 255, 255)
+  );
+}
+.bug {
+  background-image: linear-gradient(to right, #afff7a, rgb(255, 255, 255));
+}
+.ghost {
+  background-image: linear-gradient(
+    to right,
+    rgb(181, 136, 255),
+    rgb(255, 255, 255)
+  );
+}
+.steel {
+  background-image: linear-gradient(
+    to right,
+    rgb(189, 203, 235),
+    rgb(255, 255, 255)
+  );
+}
+.dragon {
+  background-image: linear-gradient(
+    to right,
+    rgb(117, 115, 250),
+    rgb(255, 255, 255)
+  );
+}
+.dark {
+  background-image: linear-gradient(
+    to right,
+    rgb(101, 113, 129),
+    rgb(255, 255, 255)
+  );
+}
+.fairy {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 192, 203, 0.863),
+    rgb(255, 255, 255)
+  );
+}
+
+.card-container {
+  border: 4px solid #000000;
+  border-radius: 2%;
+}
+.appShellHeader {
+  background-color: #fd3b34;
+}
+.appShellBody {
+  background-image: linear-gradient(to bottom, #ffffff, rgb(212, 182, 182));
+}
+.navButton1 {
+  background-image: linear-gradient(to top, #ffffff,#fd3b34);
 }
