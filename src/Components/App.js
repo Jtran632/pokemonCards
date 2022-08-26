@@ -18,10 +18,13 @@ import axios from "axios";
 import PokemonCardData from "./pokemonCard";
 
 function App() {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   const [opened, setOpened] = useState(false);
 
   const [curPage, setCurPage] = useState(
-    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20"
+    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=24"
   );
   const [nextPage, setNextPage] = useState();
   const [prevPage, setPrevPage] = useState();
@@ -102,32 +105,32 @@ function App() {
             </Navbar.Section>
           </Navbar>
         }
-        // header={
-        //   <Header height={80} className="appShellHeader">
-        //     <div
-        //       style={{ display: "flex", alignItems: "center", height: "100%" }}
-        //     >
-        //       <MediaQuery>
-        //         <Burger
-        //           transitionDuration={500}
-        //           size={30}
-        //           opened={opened}
-        //           onClick={() => setOpened((o) => !o)}
-        //           color="white"
-        //           mr="xs"
-        //           aria-label="Open navigation"
-        //         />
-        //       </MediaQuery>
-        //       <IconPokeball size={60} color="red" fill={"white"} />
-        //     </div>
-        //   </Header>
-        // }
+        header={
+          <Header height={80} className="appShellHeader">
+            <div
+              style={{ display: "flex", alignItems: "center", height: "100%" }}
+            >
+              <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+                <Burger
+                  transitionDuration={500}
+                  size={40}
+                  opened={opened}
+                  onClick={() => setOpened((o) => !o)}
+                  color="white"
+                  mr="xs"
+                  aria-label="Open navigation"
+                />
+              </MediaQuery>
+              <IconPokeball className="PokeBall" size={80} color="red" fill={"white"} onClick={()=>openInNewTab("https://www.youtube.com/watch?v=rg6CiPI6h2g")}/>
+            </div>
+          </Header>
+        }
       >
-        <ScrollArea.Autosize
+        {/* <ScrollArea.Autosize
           maxHeight={"100%"}
-          style={{ paddingLeft: 120, paddingRight: 120 }}
-        >
-          <SimpleGrid cols={3} spacing="lg">
+          style={{ paddingLeft: 30, paddingRight: 30 }}
+        > */}
+          <SimpleGrid cols={4} spacing="md">
             {pokeData
               .sort((a, b) => a.id - b.id)
               .map((items, index) => (
@@ -141,10 +144,11 @@ function App() {
                   weight={items.weight}
                   height={items.height}
                   abilities={items.abilities}
+                  href="https://google.com"
                 />
               ))}
           </SimpleGrid>
-        </ScrollArea.Autosize>
+        {/* </ScrollArea.Autosize> */}
       </AppShell>
     </div>
   );
