@@ -1,5 +1,6 @@
 import { Card, Image, Text } from "@mantine/core";
 import "../index.css";
+
 const PokemonCardData = ({
   id,
   name,
@@ -14,19 +15,21 @@ const PokemonCardData = ({
     <Card
       shadow="sm"
       className={`card-container ${types[0].type.name}`}
-      style={{ textAlign: "center", color: "black"}}
+      style={{ textAlign: "center", color: "black" }}
     >
       <Card.Section>
         <h1>
           {id + " "}
-          {name.toUpperCase().slice(0, 1)}
-          {name.slice(1)}
+          {name.toUpperCase().slice(0, 1) + name.slice(1)}
         </h1>{" "}
       </Card.Section>
       <Card.Section>
-        <Image src={image} radius="md" height={150} fit="contain">
-          {" "}
-        </Image>
+        <Image
+          src={image.front_default}
+          radius="md"
+          height={200}
+          fit="contain"
+        ></Image>
       </Card.Section>
       <Card.Section withBorder inheritPadding="xs">
         <Text style={{ textDecoration: "underline", fontWeight: "bold" }}>
@@ -40,15 +43,26 @@ const PokemonCardData = ({
         <br />
       </Card.Section>
       <Card.Section>
-      <Text style={{ textDecoration: "underline", fontWeight: "bold" }}>
+        <Text style={{ textDecoration: "underline", fontWeight: "bold" }}>
           Type
         </Text>
-        {types.map((i) => " | " + i.type.name.toUpperCase().slice(0,1) + i.type.name.slice(1,) + " | ")}
+        {types.map(
+          (i) =>
+            " | " +
+            (i.type.name.toUpperCase().slice(0, 1) + i.type.name.slice(1)) +
+            " | "
+        )}
         <br />
         <Text style={{ textDecoration: "underline", fontWeight: "bold" }}>
           Abilities
         </Text>
-        {abilities.map((i) => " | " + i.ability.name.toUpperCase().slice(0,1) + i.ability.name.slice(1,)  + "  ")}
+        {abilities.map(
+          (i) =>
+            " | " +
+            (i.ability.name.toUpperCase().slice(0, 1) +
+              i.ability.name.slice(1)) +
+            "  "
+        )}
         <br />
         {/* Weight: {weight / 10} {"kg || "} {((weight / 10) * 2.205).toFixed(1)}{" "}
         {"lb"}
